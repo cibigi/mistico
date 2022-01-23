@@ -1,0 +1,63 @@
+:root {
+    --bgcolor: rgb(44, 44, 44);
+    --fgcolor: rgb(255, 255, 255);
+    --gcolor1: rgb(0, 180, 200);
+    --gcolor2: rgb(140, 0, 255);
+    --llcolor: rgba(0, 180, 200, 0.09);
+}
+
+body {
+    padding: 50px;
+    font-family: Verdana, sans-serif;
+    background-color: var(--bgcolor);
+    color: var(--fgcolor);
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 30;
+    font-weight: normal;
+}
+
+a {
+    color: var(--fgcolor);
+}
+
+#square {
+	background: linear-gradient(60deg, var(--gcolor1), var(--gcolor2));
+	height: 200px;
+	width: 200px;
+}
+
+.footer {
+    padding: 30px;
+    border-bottom: 10px solid var(--gcolor1);
+    border-left: 10px solid var(--gcolor1);
+}
+
+.footer p {
+    font-size: 13px;
+}
+
+#risorsa {
+    background-color: var(--bgcolor);
+    font-size: 20px;
+    padding: 15px;
+    color: var(--fgcolor);
+}
+
+#risorsabutton {
+    background: linear-gradient(60deg, var(--gcolor1), var(--gcolor2));
+    font-size: 20px;
+    padding: 15px;
+    color: var(--fgcolor);
+}
+
+@media only screen and (max-width: 1200px) {
+    body {
+        padding: 4px;
+    }
+}
