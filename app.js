@@ -3,12 +3,12 @@ function welcome() {
     document.documentElement.style.setProperty("--fgcolor", localStorage.getItem("fgcolor"));
     document.documentElement.style.setProperty("--gcolor1", localStorage.getItem("gcolor1"));
     document.documentElement.style.setProperty("--gcolor2", localStorage.getItem("gcolor2"));
-    if (localStorage.getItem("f1") != null) {
-        document.body.style.fontFamily = localStorage.getItem("f1");
-    }
     if (localStorage.getItem("f2") != null) {
+        document.body.style.fontFamily = localStorage.getItem("f2");
+    }
+    if (localStorage.getItem("f1") != null) {
         for (var i = 0; i < document.getElementsByTagName("h1").length; i++) {
-            document.getElementsByTagName("h1")[i].style.fontFamily = localStorage.getItem("f2");
+            document.getElementsByTagName("h1")[i].style.fontFamily = localStorage.getItem("f1");
         }
     }
     if (localStorage.getItem("sn") != null) {
@@ -57,21 +57,21 @@ function mistico() {
 
         localStorage.setItem("gcolor2", ris);
         complete();
-    } else if (ris.includes("setf1")) {
-        //Font 1
-        ris = ris.replace("setf1", "");
+    } else if (ris.includes("setf2")) {
+        //Page font
+        ris = ris.replace("setf2", "");
         document.body.style.fontFamily = ris;
 
-        localStorage.setItem("f1", ris);
+        localStorage.setItem("f2", ris);
         complete();
-    } else if (ris.includes("setf2")) {
-        //Font 2
-        ris = ris.replace("setf2", "");
+    } else if (ris.includes("setf1")) {
+        //Titles font
+        ris = ris.replace("setf1", "");
         for (var i = 0; i < document.getElementsByTagName("h1").length; i++) {
             document.getElementsByTagName("h1")[i].style.fontFamily = ris;
         }
 
-        localStorage.setItem("f2", ris);
+        localStorage.setItem("f1", ris);
         complete();
     } else if (ris.includes("setn")) {
         //Title
